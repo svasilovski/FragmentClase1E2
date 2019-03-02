@@ -35,15 +35,18 @@ public class ContactAdapter extends BaseAdapter {
         View view;
 
         if(convertView == null){
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_contact_list , parent, false);
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_item_contact , parent, false);
         } else {
             view = convertView;
         }
 
         Contact contact = (Contact)getItem(position);
 
-        TextView phone = (TextView)view.findViewById(R.id.tv_phone);
-        phone.setText(String.valueOf(contact.getPhone()));
+        TextView name = (TextView)view.findViewById(R.id.tv_name);
+        name.setText(String.valueOf(contact.getName()));
+
+        TextView last_name = (TextView)view.findViewById(R.id.tv_last_name);
+        name.setText(String.valueOf(contact.getLastName()));
 
         return view;
     }
