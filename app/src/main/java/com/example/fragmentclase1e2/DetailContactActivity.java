@@ -8,9 +8,9 @@ public class DetailContactActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_list);
+        setContentView(R.layout.fragment_detail_contact);
 
-        if(savedInstanceState != null){
+        if(savedInstanceState == null){
             Contact contact = new Contact(
                     getIntent().getIntExtra(DetailContactFragment.PHONE, 0),
                     getIntent().getStringExtra(DetailContactFragment.NAME),

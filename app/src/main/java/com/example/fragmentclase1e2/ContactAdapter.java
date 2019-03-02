@@ -42,11 +42,9 @@ public class ContactAdapter extends BaseAdapter {
 
         Contact contact = (Contact)getItem(position);
 
-        TextView name = (TextView)view.findViewById(R.id.tv_name);
-        name.setText(String.valueOf(contact.getName()));
+        TextView phone = (TextView)view.findViewById(R.id.tv_phone);
+        phone.setText(String.valueOf(contact.getPhone()));
 
-        TextView last_name = (TextView)view.findViewById(R.id.tv_last_name);
-        name.setText(String.valueOf(contact.getLastName()));
 
         return view;
     }
