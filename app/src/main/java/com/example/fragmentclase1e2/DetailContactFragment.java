@@ -23,8 +23,8 @@ public class DetailContactFragment extends Fragment {
 
         Bundle args = new Bundle();
         args.putInt(PHONE, contact.getPhone());
-        args.getString(NAME, contact.getName());
-        args.getString(LAST_NAME, contact.getLastName());
+        args.putString(NAME, contact.getName());
+        args.putString(LAST_NAME, contact.getLastName());
 
         frag.setArguments(args);
 
